@@ -2,6 +2,7 @@
   "name": "next-ts",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "postinstall": "prisma generate",
     "dev": "next dev",
@@ -22,6 +23,7 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@react-email/components": "^0.0.15",
     "@react-email/render": "^0.0.12",
+    "@t3-oss/env-nextjs": "^0.9.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "cmdk": "^1.0.0",

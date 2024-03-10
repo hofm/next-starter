@@ -1,9 +1,8 @@
-import { getServerSession } from 'next-auth/next';
 import { redirect } from 'next/navigation';
-import { authOptions } from '../utils/auth';
+import { getServerAuthSession } from '../utils/auth';
 
 export default async function AdminPage() {
-  const session = await getServerSession(authOptions);
+  const session = await getServerAuthSession();
 
   if (session?.user.role !== 'ADMIN') {
     redirect('/denied');

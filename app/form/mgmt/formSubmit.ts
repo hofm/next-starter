@@ -17,7 +17,7 @@ export async function onSubmitAction(
   if (!parsed.success) {
     const fields: Record<string, string> = {};
     for (const key of Object.keys(formData)) {
-      fields[key] = formData[key].toString();
+      fields[key] = formData[key]?.toString() ?? '';
     }
     return {
       message: 'Invalid form data',
